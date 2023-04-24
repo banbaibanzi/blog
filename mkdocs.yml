@@ -1,0 +1,46 @@
+site_name: banbaibanzi
+nav:
+  - 主页:
+      - aa: home/index.md
+  - 测试页: index.md
+theme:
+  name: material
+  palette:
+    # Palette toggle for automatic mode
+    # - media: "(prefers-color-scheme)"
+    #   toggle:
+    #     icon: material/brightness-auto
+    #     name: default
+    #   primary: blue grey
+    #   accent: orange
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: light
+      toggle:
+        icon: material/brightness-7
+        name: light
+      primary: blue grey
+      accent: orange
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: dark
+      primary: blue grey
+      accent: orange
+  font:
+    text: Roboto Mono
+  language: zh
+  icon:
+    logo: material/library
+  # logo: assets/logo.jpg
+  features:
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+extra_css:
+  - stylesheets/extra.css
