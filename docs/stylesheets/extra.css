@@ -1,16 +1,15 @@
-:root {
-  /* --md-primary-fg-color:        #EE0F0F;
-  --md-primary-fg-color--light: #ECB7B7;
-  --md-primary-fg-color--dark:  #90030C; */
-}
 /* 日间模式 */
 [data-md-color-scheme="light"] {
+  --md-typeset-a-color:#546d78;
   /* --md-primary-fg-color: #D0DEAA; */
-  /* --md-typeset-a-color: red */
   /* --md-primary-fg-color--light: #ECB7B7; */
   /* --md-primary-fg-color--dark:  #90030C; */
 }
 /* 夜间模式 */
 [data-md-color-scheme="slate"] {
   --md-hue: 210; 
+}
+/* 隐藏footer */
+.md-footer{
+  display: none;
 }

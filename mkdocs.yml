@@ -7,6 +7,7 @@ nav:
   - 测试页: home/index.md
 theme:
   name: material
+  custom_dir: overrides
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -37,4 +38,14 @@ theme:
     - navigation.expand
     - content.code.copy #复制代码块
 extra_css:
+  - stylesheets/Aplayer.min.css
   - stylesheets/extra.css
+extra_javascript:
+  - javascripts/Aplayer.min.js
+  - javascripts/Meting.mim.js
+  - javascripts/extra.js
+extra:
+  generator: false #删除页脚显示
+  # social:
+  #   - icon: fontawesome/brands/github
+  #     link: https://github.com/banbaibanzi
