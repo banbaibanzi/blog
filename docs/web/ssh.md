@@ -37,19 +37,17 @@ ssh-keygen -t rsa -C "xxx@xx.com" -f ~/.ssh/gitlab_id_rsa
 
 ## vscode
 
-### 下载地址
+### 官网
 
-[下载地址](https://code.visualstudio.com/)
+<a href="https://code.visualstudio.com/" target="_blank">vscode链接</a>
 
 ### 解决vscode下载速度缓慢问题
 
 复制官网下载链接，例如
 
-```
-https://az764295.vo.msecnd.net/stable/fd6f3bce6709b121a895d042d343d71f317d74e7/VSCodeUserSetup-x64-1.54.2.exe
-```
+`https://az764295.vo.msecnd.net/stable/fd6f3bce6709b121a895d042d343d71f317d74e7/VSCodeUserSetup-x64-1.54.2.exe`，
 
-，将[az764295.vo.msecnd.net]替换为国内源[vscode.cdn.azure.cn]即可
+将`az764295.vo.msecnd.net`替换为国内源`vscode.cdn.azure.cn`即可
 
 ### 报错
 

@@ -1,6 +1,6 @@
 ## nvm-windows下载
 
-[nvm下载链接](https://github.com/coreybutler/nvm-windows/releases)点击最新版本nvm-setup.zip下载安装即可
+<a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank">nvm下载链接</a>点击最新版本nvm-setup.zip下载安装即可
 
 ## 配置环境变量（默认配置，可忽略）
 

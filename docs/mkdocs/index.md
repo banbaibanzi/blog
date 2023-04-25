@@ -1,12 +1,12 @@
 ## 安装phthon
 
-官网：[https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/)
+官网：<a href="https://www.python.org/downloads/windows/" target="_blank">https://www.python.org/downloads/windows/</a>
 
 ## 安装pip
 
 pip是Python的包管理工具，该工具提供了对Python包的查找、下载、安装、卸载的功能。
 
-官网：[https://pypi.org/project/pip/#files](https://pypi.org/project/pip/#files)
+官网：<a href="https://pypi.org/project/pip/#files/" target="_blank">https://pypi.org/project/pip/#files/</a>
 
 将gz后缀文件下载并压缩
 
@@ -22,9 +22,15 @@ python setup.py install
 
 H:\xxx\Python311
 
-## mkdocs-material
+## 文档
 
-文档地址：[https://squidfunk.github.io/mkdocs-material/](https://squidfunk.github.io/mkdocs-material/)
+### mkdocs
+
+文档地址：<a href="https://www.mkdocs.org/" target="_blank">mkdocs</a>
+
+### mkdocs-material
+
+文档地址：<a href="https://squidfunk.github.io/mkdocs-material/" target="_blank">mkdocs-material</a>
 
 使用pip安装mkdocs
 
@@ -49,7 +55,7 @@ mkdocs serve
 
 创建分支gh-pages
 
-进入Actions--New workflow--set up a workflow yourself,
+进入Actions>New workflow>set up a workflow yourself
 
 复制如下配置
 
@@ -81,4 +87,4 @@ jobs:
 
 ## 查看博客地址
 
-github当前仓库--Settings--Pages
+github当前仓库>Settings>Pages

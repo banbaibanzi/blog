@@ -2,6 +2,10 @@ site_name: banbaibanzi
 nav:
   - 主页:
       - 简介: index.md
+  - 工具:
+      - windows软件: tools/window.md
+      - 插件:
+          - chrome: tools/chrome.md
   - 前端:
       - 工具:
           - nvm: web/nvm.md
@@ -45,8 +49,10 @@ theme:
     - navigation.tabs #tabs
     # - navigation.tabs.sticky  #tabs固定
     - navigation.sections
-    - navigation.expand
+    - navigation.expand #打开Tab时左侧目录全部展开
+    - navigation.indexes #启用节索引页后，可以将文档直接附加到节
     - content.code.copy #复制代码块
+    - search.suggest #搜索输入一些字母时推荐补全整个单词
 extra_css:
   - stylesheets/Aplayer.min.css
   - stylesheets/extra.css

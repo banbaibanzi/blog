@@ -16,3 +16,6 @@
 h2{
  color: #546d78;
 }
+.md-typeset a{
+  color: var(--md-accent-fg-color);
+}
