@@ -1,10 +1,20 @@
 site_name: banbaibanzi
 nav:
   - 主页:
-      - aa: index.md
+      - 简介: index.md
+  - 前端:
+      - 工具:
+          - nvm: web/nvm.md
+          - ssh配置、vscode、扩展: web/ssh.md
+          - vue常用库: web/vue常用库.md
+          - oss视频首帧、在线二维码: web/oss.md
+      - js:
+          - map: web/js-1.md
+      - css:
+          - mixin、extend: web/mixin.md
+          - css绘制: web/css图形.md
   - mkdocs搭建:
       - mkdocs: mkdocs/index.md
-  - 测试页: home/index.md
 theme:
   name: material
   custom_dir: overrides
