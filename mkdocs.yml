@@ -2,23 +2,26 @@ site_name: banbaibanzi
 nav:
   - 主页:
       - 简介: index.md
-  - 六爻:
-      - 文档: liuyao/basis-1.md
   - 工具:
-      - windows软件: tools/window.md
       - 插件:
           - chrome: tools/chrome.md
+      - windows软件: tools/window.md
+      - windows系统: tools/window-system.md
+      - R星: tools/Rxing.md
   - 前端:
+      - Vue:
+          - Vue: vue/index.md
       - 工具:
           - nvm: web/nvm.md
           - ssh配置、vscode、扩展: web/ssh.md
           - vue常用库: web/vue-ku.md
           - oss视频首帧、在线二维码: web/oss.md
-      - js:
-          - map: web/js-1.md
+      # - js:
+      #     - map: web/js-1.md
       - css:
           - mixin、extend: web/css-1.md
           - css绘制: web/css-2.md
+  - 有趣的网站: websites/index.md
   - mkdocs搭建:
       - mkdocs: mkdocs/index.md
 theme:
@@ -26,7 +29,7 @@ theme:
   custom_dir: overrides
   palette:
     # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
+    - media: '(prefers-color-scheme: light)'
       scheme: light
       toggle:
         icon: material/brightness-7
@@ -34,7 +37,7 @@ theme:
       primary: blue grey
       accent: orange
     # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
+    - media: '(prefers-color-scheme: dark)'
       scheme: slate
       toggle:
         icon: material/brightness-4
