@@ -12,12 +12,13 @@ nav:
       - Vue:
           - Vue: vue/index.md
       - 工具:
+          - vue常用库: web/vue-ku.md
           - nvm: web/nvm.md
           - ssh配置、vscode、扩展: web/ssh.md
-          - vue常用库: web/vue-ku.md
           - oss视频首帧、在线二维码: web/oss.md
-      # - js:
-      #     - map: web/js-1.md
+      - js:
+          - ES6: web/es6.md
+          # - map: web/js-1.md
       - css:
           - mixin、extend: web/css-1.md
           - css绘制: web/css-2.md
