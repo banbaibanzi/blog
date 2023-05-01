@@ -16,9 +16,11 @@ nav:
           - nvm: web/nvm.md
           - ssh配置、vscode、扩展: web/ssh.md
           - oss视频首帧、在线二维码: web/oss.md
+      - 知识点:
+          - 防抖节流: web/debounce.md
       - js:
           - ES6: web/es6.md
-          # - map: web/js-1.md
+          - 判断属性是否存在、遍历数组: web/js-1.md
       - css:
           - mixin、extend: web/css-1.md
           - css绘制: web/css-2.md
