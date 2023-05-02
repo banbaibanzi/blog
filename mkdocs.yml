@@ -18,9 +18,11 @@ nav:
           - oss视频首帧、在线二维码: web/oss.md
       - 知识点:
           - 防抖节流: web/debounce.md
+          - sort打乱数组: web/sort.md
       - js:
           - ES6: web/es6.md
           - 判断属性是否存在、遍历数组: web/js-1.md
+          - 变量提升: web/variate.md
       - css:
           - mixin、extend: web/css-1.md
           - css绘制: web/css-2.md
