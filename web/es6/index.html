@@ -1,0 +1,1849 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../sort/">
+      
+      
+        <link rel="next" href="../js-1/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
+    
+    
+      
+        <title>ES6 - banbaibanzi</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/Aplayer.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+<!-- 音乐播放器 -->
+<meting-js server="netease" type="playlist" id="8380416345" fixed="true"> </meting-js>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="light" data-md-color-primary="blue-grey" data-md-color-accent="orange">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="banbaibanzi" class="md-header__button md-logo" aria-label="banbaibanzi" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            banbaibanzi
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ES6
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="light" data-md-color-primary="blue-grey" data-md-color-accent="orange"  aria-label="light"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="light" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="orange"  aria-label="dark"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="dark" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        主页
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tools/chrome/" class="md-tabs__link">
+        工具
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../vue/" class="md-tabs__link md-tabs__link--active">
+        前端
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../websites/" class="md-tabs__link">
+      有趣的网站
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../mkdocs/" class="md-tabs__link">
+        mkdocs搭建
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="banbaibanzi" class="md-nav__button md-logo" aria-label="banbaibanzi" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    banbaibanzi
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../..">主页</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          主页
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          工具
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          工具
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          插件
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          插件
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/chrome/" class="md-nav__link">
+        chrome
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/window/" class="md-nav__link">
+        windows软件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/window-system/" class="md-nav__link">
+        windows系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/Rxing/" class="md-nav__link">
+        R星
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          前端
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          前端
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../vue/">Vue</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Vue
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          工具
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          工具
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vue-ku/" class="md-nav__link">
+        vue常用库
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nvm/" class="md-nav__link">
+        nvm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssh/" class="md-nav__link">
+        ssh配置、vscode、扩展
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oss/" class="md-nav__link">
+        oss视频首帧、在线二维码
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          知识点
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          知识点
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debounce/" class="md-nav__link">
+        防抖节流
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sort/" class="md-nav__link">
+        sort打乱数组
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          js
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          js
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ES6
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ES6
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    文档
+  </a>
+  
+    <nav class="md-nav" aria-label="文档">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#es6" class="md-nav__link">
+    ES6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    Array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    常用数组方法
+  </a>
+  
+    <nav class="md-nav" aria-label="常用数组方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arr" class="md-nav__link">
+    [...arr]解构
+  </a>
+  
+    <nav class="md-nav" aria-label="[...arr]解构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    数组复制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    连接、合并数组
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    map()
+  </a>
+  
+    <nav class="md-nav" aria-label="map()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    提取部分属性值
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some" class="md-nav__link">
+    some()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#every" class="md-nav__link">
+    every()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduce" class="md-nav__link">
+    reduce()
+  </a>
+  
+    <nav class="md-nav" aria-label="reduce()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    累加器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    将数组转换为对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    求数组的最大值与最小值
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrayfrom" class="md-nav__link">
+    Array.from()
+  </a>
+  
+    <nav class="md-nav" aria-label="Array.from()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-set" class="md-nav__link">
+    new Set()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#includes" class="md-nav__link">
+    includes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finditemindexarr" class="md-nav__link">
+    find(item,index,arr)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#findindex" class="md-nav__link">
+    findIndex()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    常用操作
+  </a>
+  
+    <nav class="md-nav" aria-label="常用操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    解构法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arraypushapply" class="md-nav__link">
+    Array.push.apply()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    判断一个数据是否为数组
+  </a>
+  
+    <nav class="md-nav" aria-label="判断一个数据是否为数组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrayisarray" class="md-nav__link">
+    Array.isArray()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prototype-tostring-call" class="md-nav__link">
+    原型 prototype + toString + call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    构造函数 constructor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instanceof" class="md-nav__link">
+    instanceof
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    复制新数组，不影响原数组
+  </a>
+  
+    <nav class="md-nav" aria-label="复制新数组，不影响原数组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jsonstringify-jsonparse" class="md-nav__link">
+    先JSON.stringify( ) 后 JSON.parse( )
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectassign-arr-concat" class="md-nav__link">
+    Object.assign() || [...arr] || concat()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js-1/" class="md-nav__link">
+        判断属性是否存在、遍历数组
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../variate/" class="md-nav__link">
+        变量提升
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          css
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          css
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-tool/" class="md-nav__link">
+        css工具
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-1/" class="md-nav__link">
+        mixin、extend
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css-2/" class="md-nav__link">
+        css绘制
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../websites/" class="md-nav__link">
+        有趣的网站
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../mkdocs/">mkdocs搭建</a>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          mkdocs搭建
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    文档
+  </a>
+  
+    <nav class="md-nav" aria-label="文档">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#es6" class="md-nav__link">
+    ES6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array" class="md-nav__link">
+    Array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    常用数组方法
+  </a>
+  
+    <nav class="md-nav" aria-label="常用数组方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arr" class="md-nav__link">
+    [...arr]解构
+  </a>
+  
+    <nav class="md-nav" aria-label="[...arr]解构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    数组复制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    连接、合并数组
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    map()
+  </a>
+  
+    <nav class="md-nav" aria-label="map()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    提取部分属性值
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#some" class="md-nav__link">
+    some()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#every" class="md-nav__link">
+    every()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reduce" class="md-nav__link">
+    reduce()
+  </a>
+  
+    <nav class="md-nav" aria-label="reduce()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    累加器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    将数组转换为对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    求数组的最大值与最小值
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrayfrom" class="md-nav__link">
+    Array.from()
+  </a>
+  
+    <nav class="md-nav" aria-label="Array.from()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-set" class="md-nav__link">
+    new Set()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#includes" class="md-nav__link">
+    includes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finditemindexarr" class="md-nav__link">
+    find(item,index,arr)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#findindex" class="md-nav__link">
+    findIndex()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    常用操作
+  </a>
+  
+    <nav class="md-nav" aria-label="常用操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    解构法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arraypushapply" class="md-nav__link">
+    Array.push.apply()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    判断一个数据是否为数组
+  </a>
+  
+    <nav class="md-nav" aria-label="判断一个数据是否为数组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrayisarray" class="md-nav__link">
+    Array.isArray()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prototype-tostring-call" class="md-nav__link">
+    原型 prototype + toString + call
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    构造函数 constructor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instanceof" class="md-nav__link">
+    instanceof
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    复制新数组，不影响原数组
+  </a>
+  
+    <nav class="md-nav" aria-label="复制新数组，不影响原数组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jsonstringify-jsonparse" class="md-nav__link">
+    先JSON.stringify( ) 后 JSON.parse( )
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objectassign-arr-concat" class="md-nav__link">
+    Object.assign() || [...arr] || concat()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>ES6</h1>
+
+<h2 id="_1">文档</h2>
+<h3 id="es6">ES6</h3>
+<p>链接：<a href="https://es6.ruanyifeng.com/" target="_blank">https://es6.ruanyifeng.com/</a></p>
+<h3 id="array">Array</h3>
+<p>链接：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a></p>
+<h2 id="_2">常用数组方法</h2>
+<h3 id="arr">[...arr]解构</h3>
+<h4 id="_3">数组复制</h4>
+<p>只能深拷贝一层，第一层（基本类型）拷贝不改变原数组；深层是对象或数组时仍会改变原数组</p>
+<p>示例：<code>arr_copy = [...arr]</code></p>
+<pre><code class="language-javascript">const arr = [1, 2, 3, { type: 'vite' }]
+const arr_copy = [...arr]
+arr_copy[3].type = 'pinia'
+console.log(arr) // [1,2,3,{type: 'pinia'}]
+console.log(arr_copy) // [1,2,3,{type: 'pinia'}]
+</code></pre>
+<h4 id="_4">连接、合并数组</h4>
+<p>示例：<code>newArr=[...arr,...arr1]</code></p>
+<pre><code class="language-javascript">const arr = [1, 2, 3]
+const arr1 = [4, 5, 6]
+const newArr = [...arr, ...arr1]
+console.log(newArr) //  [1, 2, 3, 4, 5, 6]
+</code></pre>
+<h3 id="map">map()</h3>
+<h4 id="_5">提取部分属性值</h4>
+<pre><code class="language-javascript">const arr = [
+  { code: '12', type: 'js', id: 1 },
+  { code: '23', type: 'css', id: 2 }
+]
+const list = arr.map(({ id, type }) =&gt; {
+  return { id, type }
+})
+console.log(list)
+// [{id:1,type:'js'},{id:2,type:'css'}]
+</code></pre>
+<h3 id="some">some()</h3>
+<p>简介：不改变原数组，只要有一个满足条件就返回true</p>
+<pre><code class="language-javascript">const arr = [1, 2, 3, 4]
+console.log(arr.some((v) =&gt; v &gt; 3))
+// true
+console.log(arr.some((v) =&gt; v &gt; 4))
+// false
+</code></pre>
+<h3 id="every">every()</h3>
+<p>简介：所有属性都满足返回true</p>
+<pre><code class="language-javascript">const arr = [1, 2, 3, 4]
+console.log(arr.every((v) =&gt; v &gt; 0))
+// true
+console.log(arr.every((v) =&gt; v &gt; 1))
+// false
+</code></pre>
+<h3 id="reduce">reduce()</h3>
+<h4 id="_6">累加器</h4>
+<pre><code class="language-javascript">const arr = [1, 2, 3, 4]
+console.log(arr.reduce((pre, cur) =&gt; pre + cur))
+// 10
+</code></pre>
+<h4 id="_7">将数组转换为对象</h4>
+<pre><code class="language-javascript">const arr = [
+  {
+    id: 1,
+    type: 'vue'
+  },
+  {
+    id: 2,
+    type: 'vite'
+  },
+  {
+    id: 3,
+    type: 'pinia'
+  }
+]
+let result = arr.reduce((pre, cur) =&gt; {
+  return { ...pre, [cur.id]: cur }
+}, {})
+console.log(result)
+// {1:{id:1,type:'vue'},2:{id:2,type:'vite'},3:{id:3,type:'pinia'}}
+</code></pre>
+<h4 id="_8">求数组的最大值与最小值</h4>
+<pre><code class="language-javascript">const arr = [1, 2, 3, 4]
+let minValue = arr.reduce((pre, cur) =&gt; Math.min(pre, cur))
+console.log(minValue)// 1
+let maxValue = arr.reduce((pre, cur) =&gt; Math.max(pre, cur))
+console.log(maxValue)// 4
+</code></pre>
+<h3 id="arrayfrom">Array.from()</h3>
+<pre><code class="language-javascript">const arrayLike = {
+  0: 'vue',
+  1: 'vite',
+  2: 'pinia',
+  length: 3
+}
+const arr = Array.from(arrayLike)
+// ['vue', 'vite', 'pinia']
+</code></pre>
+<h4 id="new-set">new Set()</h4>
+<p>简介：可以去重</p>
+<pre><code class="language-javascript">const arr = [1, 1, 2, 3, 2, 4]
+const set = new Set(arr)
+console.log(...set) // 1,2,3,4
+console.log(Array.from(set))    // [1,2,3,4]
+</code></pre>
+<h3 id="includes">includes()</h3>
+<p>简介：判断数组中是否含有某个元素，返回true/false。是<code>indexOf()!==-1</code>的优化补充</p>
+<pre><code class="language-javascript">const arr = [1, 2, 3, 4]
+console.log(arr.includes(3))    // true
+console.log(arr.includes(5))    // false
+</code></pre>
+<h3 id="finditemindexarr">find(item,index,arr)</h3>
+<p>简介：查找数组中符合条件的第一个元素</p>
+<pre><code class="language-javascript">const arr = [1, 2, 3, 4, 3, 5, 3]
+console.log(arr.find((v) =&gt; v &gt; 3)) // 4
+</code></pre>
+<h3 id="findindex">findIndex()</h3>
+<p>简介：返回索引</p>
+<pre><code class="language-javascript">const arr = [1, 2, 3, 4, 3, 5, 3]
+console.log(arr.findIndex((v) =&gt; v &gt; 3))    // 3
+</code></pre>
+<h2 id="_9">常用操作</h2>
+<h3 id="_10">解构法</h3>
+<p>简介：移除数组中某个元素</p>
+<pre><code class="language-javascript">const [first, ...rest] = [1, 2, 3, 4, 5]
+console.log(first, rest)
+// first:1  rest:[2,3,4,5]
+</code></pre>
+<h3 id="arraypushapply">Array.push.apply()</h3>
+<p>简介：数组合并，原数组发生改变</p>
+<pre><code class="language-javascript">const arr = [1, 2, 3]
+const arr1 = [4, 5, 6]
+const arr2 = arr.push.apply(arr, arr1)
+console.log(arr) // [1, 2, 3,4, 5, 6]
+console.log(arr1) //  [4, 5, 6]
+console.log(arr2) //  6
+</code></pre>
+<h3 id="_11">判断一个数据是否为数组</h3>
+<p>示例</p>
+<pre><code class="language-javascript">const arr = [1, 2, 3]
+const obj = { type: 'vite' }
+</code></pre>
+<h4 id="arrayisarray">Array.isArray()</h4>
+<pre><code class="language-javascript">console.log(Array.isArray(arr)) //  true
+console.log(Array.isArray(obj)) //  false
+</code></pre>
+<h4 id="prototype-tostring-call">原型 <code>prototype + toString + call</code></h4>
+<pre><code class="language-javascript">console.log(Object.prototype.toString.call(arr)) //  &quot;[object Array]&quot;
+console.log(Object.prototype.toString.call(obj)) //  &quot;[object Object]&quot;
+</code></pre>
+<h4 id="constructor">构造函数 <code>constructor</code></h4>
+<pre><code class="language-javascript">console.log(arr.__proto__.constructor.name) //  &quot;Array&quot;
+console.log(obj.__proto__.constructor.name) //  &quot;Object&quot;
+</code></pre>
+<h4 id="instanceof">instanceof</h4>
+<pre><code class="language-javascript">console.log(arr instanceof Array) //  true
+console.log(obj instanceof Array) //  false
+</code></pre>
+<h3 id="_12">复制新数组，不影响原数组</h3>
+<p>示例：<code>let arr = [1, 2, 3]</code></p>
+<h4 id="jsonstringify-jsonparse">先JSON.stringify( ) 后 JSON.parse( )</h4>
+<h4 id="objectassign-arr-concat">Object.assign() || [...arr] || concat()</h4>
+<p>简介：只适用于基础类型，不适用对象数组</p>
+<pre><code class="language-javascript">let newArr = Object.assign([], arr) // let newArr = [...arr] || [].concat(arr)
+newArr.push(4)
+console.log(arr) // [1, 2, 3]
+console.log(newArr) // [1, 2, 3,4]
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.indexes", "content.code.copy", "search.suggest"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      
+        <script src="../../javascripts/Aplayer.min.js"></script>
+      
+        <script src="../../javascripts/Meting.mim.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

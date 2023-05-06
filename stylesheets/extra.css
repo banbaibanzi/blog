@@ -1,0 +1,21 @@
+/* 日间模式 */
+[data-md-color-scheme="light"] {
+  --md-typeset-a-color:#546d78;
+  /* --md-primary-fg-color: #D0DEAA; */
+  /* --md-primary-fg-color--light: #ECB7B7; */
+  /* --md-primary-fg-color--dark:  #90030C; */
+}
+/* 夜间模式 */
+[data-md-color-scheme="slate"] {
+  --md-hue: 210; 
+}
+/* 隐藏footer */
+.md-footer{
+  display: none;
+}
+h2{
+ color: #546d78;
+}
+.md-typeset a{
+  color: var(--md-accent-fg-color);
+}
