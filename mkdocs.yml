@@ -24,6 +24,7 @@ nav:
           - 判断属性是否存在、遍历数组: web/js-1.md
           - 变量提升: web/variate.md
       - css:
+          - css工具: web/css-tool.md
           - mixin、extend: web/css-1.md
           - css绘制: web/css-2.md
   - 有趣的网站: websites/index.md
