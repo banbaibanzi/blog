@@ -1,0 +1,56 @@
+[
+    {
+        "bookSourceComment": "//2025-03-24 by_b.z",
+        "bookSourceGroup": "❤️ 美图",
+        "bookSourceName": "❤️ 秀人网",
+        "bookSourceType": 2,
+        "bookSourceUrl": "https://www.xiu01.top",
+        "customOrder": 0,
+        "enabled": true,
+        "enabledCookieJar": true,
+        "enabledExplore": true,
+        "exploreUrl": "@js:\nsort = [];\npush = (title, url, type1, type2) => sort.push({\n\ttitle: title,\n\turl: url,\n\tstyle: {\n\t\tlayout_flexGrow: type1 || 1,\n\t\tlayout_flexBasisPercent: type2 || 0.25\n\t}\n});\ntopList = [['最近更新', 'zx'], ['站长推荐', 'tj']];\ntopList.map([title, uri]=> {\n\turl=`/${uri}.html`;\n\tpush (title, url,1,0.45);\n});\narList = [['秀人网', 'XiuRen'], ['模范学院', 'MFStar'], ['魅妍社', 'MiStar'], ['美媛馆', 'MyGirl'], ['爱蜜社', 'Imiss'], ['兔几盟', 'BoLoli'], ['尤物馆', 'YouWu'], ['优星馆', 'Uxing'], ['蜜桃社', 'MiiTao'], ['嗲囡囡', 'FeiLin'], ['影私荟', 'WingS'], ['顽味生活', 'Taste'], ['星乐园', 'LeYuan'], ['花の颜', 'HuaYan'], ['御女郎', 'DKGirl'], ['薄荷叶', 'MintYe'], ['尤蜜荟', 'YouMi'], , ['糖果画报', 'Candy'], ['模特联盟', 'MTMeng'], , ['猫萌榜', 'Micat'], ['花漾', 'HuaYang'], , ['星颜社', 'XingYan'], ['画语界', 'XiaoYu']];\narList.map([title, uri]=> {\n\turl=`/${uri}/<,/index{{page}}.html>`;\n\tpush (title, url,-1,0.2);\n});\npush('🍁女神🍁', '', 1, 1);\npersonList = [['奶瓶土肥圆', 'zhouyanxi', '土肥圆'], ['女神杨晨晨', 'yangchenchen', '杨晨晨'], ['Egg-尤妮丝', 'younisi', '尤妮丝'], ['就是阿朱啊', 'azhu', '阿朱'], ['妲己_Toxic', 'daji', '妲己'], ['女神王雨纯', 'wangyuchun', '王雨纯'], , ['周于希Sandy', 'zhouyuxi', '周于希'], ['朱可儿Flower', 'zhukeer', '朱可儿'], ['女神芝芝Booty', 'zhizhi_Booty', '芝芝'], ['绯月樱Cherry', 'feiyueying', '绯月樱'], ['Emily顾奈奈', 'gunainaijiang', '尹菲'], ['娜露Selena', 'nalu_Selena', '娜露'], ['嫩模陆萱萱', 'luxuanxuan', '陆萱萱'], ['馨瑶yanni', 'wangxinyao', '王馨瑶'], ['模特唐安琪', 'tanganqi', '唐安琪'], ['模特美桃酱', 'meitaojiang', '美桃酱'], ['鱼子酱Fish', 'yuzijiang', '鱼子酱'], ['模特熊小诺', 'xiongxiaonuo', '熊小诺'], ['模特婠婠么', 'wanwanmo', '婠婠么'], ['模特江真真', 'jiangzhenzhen', '江真真'], ['模特林珊珊', 'linshanshan', '林珊珊'], ['模特抖娘-利世', 'lishi', '利世'], ['模特媛媛酱', 'yaunyuanjiang', '媛媛酱'], ['模特小海臀', 'xiaohaitun', '小海臀']];\npersonList.forEach([title,uri,keyword] => {\n\turl = `/plus/search/index.asp?keyword=${keyword}&searchtype=titlekeywords&p={{page}}`\n\tpush (title, url, 1, 0.25);\n});\nJSON.stringify(sort)",
+        "lastUpdateTime": 1742883130453,
+        "respondTime": 33992,
+        "ruleBookInfo": {
+            "author": "a[rel=\"author\"]@text",
+            "coverUrl": "",
+            "name": ".sousuo@span@textNodes##(?<=\\])\\S+(?=\\s)##$1###||.item_title@h1@text##(?<=\\])\\S+##$1###",
+            "tocUrl": "",
+            "wordCount": ""
+        },
+        "ruleContent": {
+            "content": "p>img@html",
+            "imageStyle": "full",
+            "nextContentUrl": "text.下页@href"
+        },
+        "ruleExplore": {
+            "author": ".postlist-imagenum>span@text",
+            "bookList": ".list_n2||.sousuo",
+            "bookUrl": "a@href",
+            "coverUrl": "img@src",
+            "intro": ".meta-title@text||.description>p@text",
+            "kind": "{{@@.cx_like@textNodes##^##👁️}},{{@@.meta-post@textNodes##^##🕗}}",
+            "name": ".meta-title@text||h2@span@text",
+            "wordCount": ""
+        },
+        "ruleSearch": {
+            "author": "",
+            "bookList": ".sousuo",
+            "bookUrl": "h2>a@href",
+            "checkKeyWord": "女神",
+            "coverUrl": "",
+            "intro": ".description>p@text",
+            "kind": "{{@@h2@text##(.+)\\s+}},{{@@h2@text##(?<=\\[)\\S+(?=\\])##$1###}}",
+            "name": "h2@span@text##(?<=\\])\\S+(?=\\s)##$1###||h2@text##(?<=\\])\\S+(?=\\s)##$1###",
+            "wordCount": ""
+        },
+        "ruleToc": {
+            "chapterList": "h1||h2",
+            "chapterName": "text",
+            "chapterUrl": "a@href"
+        },
+        "searchUrl": "/plus/search/index.asp?keyword={{key}}&searchtype=titlekeywords<,&p={{page}}>",
+        "weight": 0
+    }
+]
